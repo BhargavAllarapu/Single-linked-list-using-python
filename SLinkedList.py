@@ -45,7 +45,7 @@ class SLinkedList:
             currnode.nextval = None
             del(temp)
         elif 1<position<length:
-            prevnode = self.headvalls
+            prevnode = self.headval
             for i in range(position-2):
                 prevnode = prevnode.nextval
             currnode = prevnode.nextval
@@ -57,7 +57,6 @@ class SLinkedList:
 
 li = SLinkedList()
 print("Welcome to single linked list")
-print(li.printList())
 a = input("Enter : ")
 b = input("Enter : ")
 c = input("Enter : ")
@@ -75,6 +74,6 @@ li.insert(e)
 li.insert(f)
 print(li.printList())
 length = li.lenghtOfNode()
-pos=int(input("Enter : "))
+pos=int(input("Enter position to delete: "))
 li.deleteNode(pos, length)
 print(li.printList())
